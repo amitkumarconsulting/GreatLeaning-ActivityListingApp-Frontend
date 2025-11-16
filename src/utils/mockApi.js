@@ -1,4 +1,6 @@
-// Mock API utility for development/testing
+// Mock API utility for development and production
+// This intercepts fetch calls to /api/activities and returns mock data
+// Used when the actual API endpoint is not available
 
 const mockActivities = [
   {
@@ -75,25 +77,28 @@ const mockActivities = [
   }
 ]
 
+// Store original fetch
 const originalFetch = window.fetch
 
-// Mock fetch for development
-if (import.meta.env.DEV) {
-  window.fetch = async (...args) => {
-    const url = args[0]
+// Mock fetch for all environments (dev and production)
+// This intercepts /api/activities calls and returns mock data
+window.fetch = async (...args) => {
+  const url = args[0]
+  
+  // Intercept /api/activities calls
+  if (typeof url === 'string' && url.includes('/api/activities')) {
+    await new Promise(resolve => setTimeout(resolve, 300))
     
-    if (typeof url === 'string' && url.includes('/api/activities')) {
-      return new Response(JSON.stringify(mockActivities), {
-        status: 200,
-        headers: {
-          'Content-Type': 'application/json'
-        }
-      })
-    }
-    
-    // Fallback to original fetch for other requests
-    return originalFetch(...args)
+    return new Response(JSON.stringify(mockActivities), {
+      status: 200,
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    })
   }
+  
+  // Fallback to original fetch for other requests
+  return originalFetch(...args)
 }
 
 export default mockActivities
