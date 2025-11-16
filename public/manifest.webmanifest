@@ -1,6 +1,6 @@
 {
   "name": "Activity Listing App",
-  "short_name": "Activities",
+  "short_name": "Great Learning - Activity Listing App",
   "description": "Activity Listing Page - PWA",
   "theme_color": "#3b82f6",
   "background_color": "#ffffff",
@@ -11,19 +11,19 @@
   "categories": ["education", "productivity"],
   "icons": [
     {
-      "src": "/Assets/icon-192x192.png",
+      "src": "/public/Assets/icon-192x192.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "/Assets/icon-512x512.png",
+      "src": "/public/Assets/icon-512x512.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "/Assets/icon-512x512.png",
+      "src": "/public/Assets/icon-512x512.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "maskable"
@@ -37,7 +37,7 @@
       "url": "/",
       "icons": [
         {
-          "src": "/Assets/icon-192x192.png",
+          "src": "/public/Assets/icon-192x192.png",
           "sizes": "192x192"
         }
       ]
