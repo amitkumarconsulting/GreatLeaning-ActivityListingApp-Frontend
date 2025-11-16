@@ -21,19 +21,19 @@ export default defineConfig({
         categories: ['education', 'productivity'],
         icons: [
           {
-            src: 'pwa-192x192.png',
+            src: 'Assets/icon-192x192.png',
             sizes: '192x192',
             type: 'image/png',
             purpose: 'any'
           },
           {
-            src: 'pwa-512x512.png',
+            src: 'Assets/icon-512x512.png',
             sizes: '512x512',
             type: 'image/png',
             purpose: 'any'
           },
           {
-            src: 'pwa-512x512.png',
+            src: 'Assets/icon-512x512.png',
             sizes: '512x512',
             type: 'image/png',
             purpose: 'maskable'
@@ -46,7 +46,7 @@ export default defineConfig({
             short_name: 'Activities',
             description: 'View all activities',
             url: '/',
-            icons: [{ src: 'pwa-192x192.png', sizes: '192x192' }]
+            icons: [{ src: 'Assets/icon-192x192.png', sizes: '192x192' }]
           }
         ]
       },
