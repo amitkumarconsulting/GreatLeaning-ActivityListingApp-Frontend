@@ -1,8 +1,8 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import { useTheme } from './hooks/useTheme'
 import ThemeToggle from './components/ThemeToggle'
-// import PWAInstallPopup from './components/PWAInstallPopup'
-// import PWAUpdatePrompt from './components/PWAUpdatePrompt'
+import PWAInstallPopup from './components/PWAInstallPopup'
+import PWAUpdatePrompt from './components/PWAUpdatePrompt'
 import ActivityListingPage from './pages/ActivityListingPage'
 
 function App() {
@@ -37,8 +37,8 @@ function App() {
           </Routes>
         </main>
 
-        {/* <PWAInstallPopup />
-        <PWAUpdatePrompt /> */}
+        <PWAInstallPopup />
+        <PWAUpdatePrompt />
       </div>
     </Router>
   )
